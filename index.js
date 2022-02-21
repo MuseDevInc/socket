@@ -1,7 +1,14 @@
+require('dotenv').config()
+const express = require('express')
+const socketIO = require('socket.io')
+const server = express().listen( process.env.PORT || 8900, () =>console.log('listening socket'))
+
 //connect to socket.io at port 8900 and accept requests at port 3000 
-const io = require('socket.io')(8900 ,{
+const io = socketIO(server 
+  ,{
     cors:{
-        origin:['http://localhost:3000','https://muse-dev.herokuapp.com']
+        // origin:['http://localhost:3000','https://muse-dev.herokuapp.com','*']
+        origin: '*'
     },
 
 })
