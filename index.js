@@ -7,8 +7,7 @@ const server = express().listen( process.env.PORT || 8900, () =>console.log('lis
 const io = socketIO(server 
   ,{
     cors:{
-        // origin:['http://localhost:3000','https://muse-dev.herokuapp.com','*']
-        origin: '*'
+        origin:['http://localhost:3000','https://muse-dev.herokuapp.com']
     },
 
 })
