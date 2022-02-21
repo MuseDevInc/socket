@@ -1,7 +1,7 @@
 //connect to socket.io at port 8900 and accept requests at port 3000 
-const io = require('socket.io')(8900,{
+const io = require('socket.io')(8900 ,{
     cors:{
-        origin:"http://localhost:3000",
+        origin:['http://localhost:3000','https://muse-dev.herokuapp.com']
     },
 
 })
